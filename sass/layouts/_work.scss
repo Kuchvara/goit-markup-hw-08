@@ -1,0 +1,36 @@
+.work {
+  padding: 94px 0;
+  @media (max-width: 1199px) {
+    display: none;
+  }
+
+  &__title {
+    color: $black-text;
+    @include font(36px, 1.17, 700);
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0 0 50px;
+  }
+  &__item {
+    width: calc((100% - 30px * 2) / 3);
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__text {
+    @include font(14px, 1.14, 700);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white;
+    display: block;
+    background-color: $background-work;
+    padding: 27px 82px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

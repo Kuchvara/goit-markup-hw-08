@@ -1,0 +1,35 @@
+.hero {
+  padding: 118px 60px;
+  background: linear-gradient(
+      90deg,
+      rgba(47, 48, 58, 0.4) 50%,
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url(../images/Background.jpg);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $background-hero;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    max-width: 1600px;
+  }
+}
+
+.hero__title {
+  color: $white;
+  @include font(26px, 1.615, 900);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    @include font(44px, 1.36, 900);
+    max-width: 696px;
+  }
+}

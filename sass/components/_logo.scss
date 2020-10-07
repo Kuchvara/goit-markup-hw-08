@@ -1,0 +1,29 @@
+.logo {
+  font-family: $aditional-font;
+  color: $active-color;
+
+  &--header {
+    color: $black;
+    margin-right: 93px;
+  }
+}
+
+.logo {
+  @include font(24px, 1.16, 700);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    @include font(26px, 1.19, 700);
+  }
+
+  // &--header {
+  //   color: $black;
+  //   margin-right: 93px;
+  // }
+  &--footer {
+    color: $white;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,85 @@
+.header {
+  border-bottom: 1px solid $portfolio-line;
+
+  &-menu {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &-flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* меню навігації в хедері */
+
+.navigation-link {
+  display: block;
+  @include font(14px, 1.14, 500);
+  letter-spacing: 0.02em;
+  color: $black-text;
+  text-decoration: none;
+  padding-bottom: 7px;
+  padding-top: 8px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
+}
+.current {
+  position: relative;
+  color: $active-color;
+}
+.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $active-color;
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+}
+
+.contacts-item:not(:last-child) {
+  margin-right: 30px;
+}
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-link {
+  display: flex;
+  align-items: center;
+  color: $gray-text;
+  @include font(14px, 1.14, 500);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
+
+  &:hover .contacts-icon,
+  &:focus .contacts-icon {
+    fill: $active-color;
+  }
+}

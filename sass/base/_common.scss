@@ -1,0 +1,33 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: $main-font;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.container {
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
