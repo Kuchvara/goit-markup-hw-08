@@ -8,11 +8,15 @@
 
 .modal-form-text {
   display: block;
-  @include font(20px, 1.15, 700);
+  @include font(20px, 1.5, 700);
   text-align: center;
   letter-spacing: 0.03em;
   color: $black-text;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    @include font(20px, 1.15, 700);
+  }
 }
 
 .modal-form-label {
@@ -95,9 +99,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include font(14px, 1.71);
+    @include font(12px, 1.16);
     color: $gray-text;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+      @include font(14px, 1.71);
+    }
   }
 
   &-field {

@@ -2,6 +2,7 @@
   background-color: $background;
 }
 .footer-container {
+  padding: 60px 15px;
   @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;

@@ -1,9 +1,17 @@
 .portfolio {
-  padding: 94px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 
   &__menu {
     justify-content: center;
-    margin: 0 0 50px;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 40px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 50px;
+    }
   }
 
   &__button {
@@ -31,6 +39,12 @@
 
 .portfolio__menu__item {
   display: inline-block;
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+  }
 }
 .portfolio__menu__item:not(:last-child) {
   margin-right: 8px;

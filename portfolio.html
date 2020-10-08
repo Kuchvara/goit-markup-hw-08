@@ -16,7 +16,13 @@
         <a class="logo" href="./index.html"
           >Web<span class="logo--header">Studio</span>
         </a>
-        <button type="button" class="mobile__button">
+        <button
+          type="button"
+          class="mobile__button"
+          aria-expanded="true"
+          aria-controls="mobile__menu"
+          data-menu-button
+        >
           <svg
             width="40px"
             height="40px"
@@ -34,7 +40,7 @@
           </svg>
         </button>
 
-        <div class="mobile__menu">
+        <div class="mobile__menu" id="mobile__menu" data-menu>
           <nav class="header-menu">
             <ul class="navigation">
               <li class="navigation__item">
@@ -359,5 +365,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
