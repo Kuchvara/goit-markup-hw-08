@@ -2,23 +2,104 @@
   border-bottom: 1px solid $portfolio-line;
 
   &-menu {
-    display: flex;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      padding-top: 24px;
+      padding-bottom: 25px;
+      margin-right: 305px;
+    }
   }
+}
 
-  &-flexbox {
+.header-flexbox {
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    padding: 10px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.navigation-item:not(:last-child) {
-  margin-right: 50px;
+.mobile__button {
+  padding: 0;
+  border: none;
+  background-color: $white;
+  display: inline-flex;
+
+  &:hover .mobile__icon,
+  &:focus .mobile__icon {
+    fill: $active-color;
+  }
+
+  & .mobile__icon-close {
+    display: none;
+  }
+
+  &.is-open .mobile__icon-close {
+    display: block;
+  }
+
+  &.is-open .mobile__icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    padding: 60px 0;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* меню навігації в хедері */
+
+.navigation {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
+.navigation__item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 
 .navigation-link {
   display: block;
@@ -26,8 +107,6 @@
   letter-spacing: 0.02em;
   color: $black-text;
   text-decoration: none;
-  padding-bottom: 7px;
-  padding-top: 8px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -36,10 +115,20 @@
   &:focus {
     color: $active-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 7px;
+    padding-top: 8px;
+  }
 }
 .current {
   position: relative;
   color: $active-color;
+  display: inline-block;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 12px;
+  }
 }
 .current::after {
   content: '';
@@ -48,13 +137,31 @@
   border-radius: 2px;
   background-color: $active-color;
   position: absolute;
-  bottom: -26px;
+  bottom: -8px;
   left: 0;
+
+  @media screen and (min-width: 768px) {
+    bottom: -26px;
+  }
 }
 
-.contacts-item:not(:last-child) {
-  margin-right: 30px;
+.contacts {
+  margin-right: auto;
+  margin-left: auto;
 }
+
+@media screen and (max-width: 767px) {
+  .contacts-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .contacts-icon {
   fill: currentColor;
   margin-right: 10px;
@@ -63,7 +170,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-link {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: nowrap;
   align-items: center;
   color: $gray-text;
   @include font(14px, 1.14, 500);

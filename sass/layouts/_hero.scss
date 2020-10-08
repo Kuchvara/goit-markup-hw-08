@@ -10,10 +10,10 @@
   margin-right: auto;
   margin-left: auto;
   background-color: $background-hero;
+  max-width: 1600px;
 
   @media screen and (min-width: 1200px) {
     padding: 200px 0;
-    max-width: 1600px;
   }
 }
 
