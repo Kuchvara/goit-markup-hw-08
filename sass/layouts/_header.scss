@@ -1,23 +1,33 @@
 .header {
   border-bottom: 1px solid $portfolio-line;
+}
 
-  &-menu {
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      padding-top: 24px;
-      padding-bottom: 25px;
-      margin-right: 305px;
-    }
+.header__menu {
+  @media screen and (min-width: 768px) {
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 305px;
   }
 }
 
 .header-flexbox {
-  position: relative;
-
   @media screen and (max-width: 767px) {
+    position: relative;
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -61,6 +71,7 @@
 
 .mobile__menu {
   @media screen and (max-width: 767px) {
+    z-index: 2;
     display: none;
     text-align: center;
     position: absolute;
@@ -75,7 +86,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
   }
@@ -84,6 +95,12 @@
 /* меню навігації в хедері */
 
 .navigation {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
@@ -95,7 +112,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .navigation__item:not(:last-child) {
     margin-right: 50px;
   }
@@ -140,7 +157,11 @@
   bottom: -8px;
   left: 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    bottom: -32px;
+  }
+
+  @media screen and (min-width: 1200px) {
     bottom: -26px;
   }
 }
@@ -156,6 +177,12 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .contacts-item:not(:last-child) {
     margin-right: 30px;
@@ -168,18 +195,34 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+  }
 }
+
 .contacts-link {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
   color: $gray-text;
-  @include font(14px, 1.14, 500);
   letter-spacing: 0.02em;
   text-decoration: none;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+    @include font(18px, 1.16, 500);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include font(12px, 1.16, 500);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 1.14, 500);
+  }
 
   &:hover,
   &:focus {

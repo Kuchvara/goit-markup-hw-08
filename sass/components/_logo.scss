@@ -1,26 +1,25 @@
 .logo {
   font-family: $aditional-font;
   color: $active-color;
-
-  &--header {
-    color: $black;
-    margin-right: 93px;
-  }
-}
-
-.logo {
   @include font(24px, 1.16, 700);
   letter-spacing: 0.03em;
   text-decoration: none;
 
-  @media screen and (min-width: 1200px) {
-    @include font(26px, 1.19, 700);
+  &--header {
+    color: $black;
+    display: inline-block;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin: 26px 88px 26px 0;
+    }
   }
 
-  // &--header {
-  //   color: $black;
-  //   margin-right: 93px;
-  // }
+  @media screen and (min-width: 1200px) {
+    @include font(26px, 1.19, 700);
+    &--header {
+      margin-right: 93px;
+    }
+  }
+
   &--footer {
     color: $white;
     margin-bottom: 20px;
