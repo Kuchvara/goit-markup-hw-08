@@ -1,5 +1,4 @@
 .header {
-  border-bottom: 1px solid $portfolio-line;
   position: relative;
 }
 
@@ -16,6 +15,7 @@
 }
 
 .header-flexbox {
+  border-bottom: 1px solid $portfolio-line;
   @media screen and (max-width: 767px) {
     position: fixed;
     top: 0;

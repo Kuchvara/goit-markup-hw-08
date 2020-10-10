@@ -845,7 +845,6 @@ ul {
 }
 
 .header {
-  border-bottom: 1px solid #ececec;
   position: relative;
 }
 
@@ -861,6 +860,10 @@ ul {
     padding-bottom: 25px;
     margin-right: 305px;
   }
+}
+
+.header-flexbox {
+  border-bottom: 1px solid #ececec;
 }
 
 @media screen and (max-width: 767px) {
