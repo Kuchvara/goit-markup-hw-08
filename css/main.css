@@ -927,7 +927,7 @@ ul {
     z-index: 2;
     display: none;
     text-align: center;
-    position: absolute;
+    position: fixed;
     top: 61px;
     left: 0;
     right: 0;
@@ -1148,8 +1148,6 @@ ul {
     align-items: baseline;
     justify-content: center;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .footer__logo-address {
     display: inline-block;
@@ -1196,6 +1194,10 @@ ul {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-contact:hover, .footer-contact:focus {
+  color: #2196f3;
 }
 
 .footer-contact:not(:last-child) {
@@ -1249,8 +1251,10 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscribe-form {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .subscribe-form {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1199px) {

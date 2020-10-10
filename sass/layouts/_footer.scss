@@ -23,8 +23,6 @@
     align-items: baseline;
     justify-content: center;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .footer__logo-address {
     display: inline-block;
@@ -49,6 +47,7 @@
     margin-bottom: 9px;
   }
 }
+
 /* тел і емеіл в футері */
 
 .footer-contact {
@@ -60,6 +59,11 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
 }
 .footer-contact:not(:last-child) {
   margin-bottom: 8px;
@@ -98,7 +102,9 @@
 }
 
 .subscribe-form {
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   @media screen and (max-width: 1199px) {
     flex-direction: column;
     align-items: center;
