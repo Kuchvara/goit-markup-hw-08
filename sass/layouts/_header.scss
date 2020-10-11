@@ -18,6 +18,7 @@
   border-bottom: 1px solid $portfolio-line;
   @media screen and (max-width: 767px) {
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -39,7 +40,6 @@
   @media screen and (min-width: 1200px) {
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;

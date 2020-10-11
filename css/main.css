@@ -633,7 +633,7 @@ ul {
 
 @media screen and (max-width: 767px) {
   .portfolio__menu {
-    margin: 0 0 40px;
+    margin: 60px 0 40px;
   }
 }
 
@@ -869,6 +869,7 @@ ul {
 @media screen and (max-width: 767px) {
   .header-flexbox {
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -894,7 +895,6 @@ ul {
   .header-flexbox {
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
